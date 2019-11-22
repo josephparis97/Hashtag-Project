@@ -6,3 +6,16 @@ services:
     ports:
     - 8080:8080
   
+  selector:
+    build: ./selector
+    ports:
+    - 5000:1997
+
+  bdd:
+    image: postgres
+    ports:
+    - 5432:5432
+    environment: 
+    - POSTGRES_USER=user
+    - POSTGRES_PASSWORD=user
+    - POSTGRES_DB=hashtagbdd

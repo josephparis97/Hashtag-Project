@@ -14,7 +14,7 @@ from datetime import datetime
 def connect():
     connection = psycopg2.connect(user = "user",
                               password = "user",
-                              host = "192.168.33.10",
+                              host = "bdd",
                               port = "5432",
                               database = "hashtagbdd")
     return connection
@@ -27,7 +27,7 @@ cursor = connection.cursor()
 
 # Print PostgreSQL version
 """
-cursor.execute("insert into hashtags(hashtag,popularity,nb_post_heure) values('sql',2113249,390)")
+cursor.execute("insert into hashtags(hashtag,popularity,nb_post_hour) values('sql',2113249,390)")
 cursor.execute("SELECT * from hashtags;")
 record = cursor.fetchone()
 print("You are connected to - ", record,"\n")
@@ -53,8 +53,11 @@ def hashtag_to_bdd(hashtag):
     #scrap post_per_hour
     post_per_hour=int(obj.find_all("div",class_="overflow-h")[1].find_all("small")[1].get_text().replace(',',''))
     print(post_per_hour)
-    
-    connection=connect()
+    try:
+        connection=connect()
+    except psycopg2.OperationalError:
+        return
+
     cursor = connection.cursor()
     #cursor.execute("SELECT ha from hashtags;")
     cursor.execute("SELECT hashtag from hashtags where hashtag=%s;",(hashtag,))
@@ -62,9 +65,9 @@ def hashtag_to_bdd(hashtag):
     #now=datetime.timestamp(datetime.now())
     #print(now)
     if record:
-        cursor.execute("update hashtags set (popularity,nb_post_heure,last_update)=(%s,%s,now()) where hashtag=%s;",(popularity,post_per_hour,hashtag))
+        cursor.execute("update hashtags set (popularity,nb_post_hour,last_update)=(%s,%s,now()) where hashtag=%s;",(popularity,post_per_hour,hashtag))
     else:
-        cursor.execute("insert into hashtags(hashtag,popularity,nb_post_heure,last_update) values(%s,%s,%s,now())",(hashtag,popularity,post_per_hour))
+        cursor.execute("insert into hashtags(hashtag,popularity,nb_post_hour,last_update) values(%s,%s,%s,now())",(hashtag,popularity,post_per_hour))
         cursor.executemany("insert into related_hashtags(hashtag,relates_hashtag) values(%s,%s)", ((hashtag, rel_hashtag) for rel_hashtag in hashtag_list))
     
     
@@ -72,6 +75,3 @@ def hashtag_to_bdd(hashtag):
     connection.commit()
     connection.close()
     cursor.close()
-    
-    
-hashtag_to_bdd("potato")
