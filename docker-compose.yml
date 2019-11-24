@@ -9,7 +9,9 @@ services:
   selector:
     build: ./selector
     ports:
-    - 5000:1997
+    - 1997:1997
+    # volumes:
+    # - ./selector:/app # for dev
 
   bdd:
     image: postgres
@@ -19,3 +21,6 @@ services:
     - POSTGRES_USER=user
     - POSTGRES_PASSWORD=user
     - POSTGRES_DB=hashtagbdd
+  
+  front:
+    build: ./front

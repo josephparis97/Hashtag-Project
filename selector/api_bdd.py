@@ -9,40 +9,30 @@ Created on Fri Nov 22 18:09:41 2019
 from flask import Flask
 from flask_restful import Resource, Api
 import scrap
-
-
+import database
+from datetime import datetime
 
 app = Flask(__name__)
 api = Api(app)
 
 class bdd_insert(Resource):
-    def get(self,hashtag):
-        return scrap.hashtag_to_bdd(hashtag)
+    def get(self, hashtag):
+        scrap.hashtag_to_bdd(hashtag)
+        return {"uri": f"hashtag/{hashtag}"}
 
-class initdb(Resource):
-    def get(self):
-        conn = scrap.connect()
-        cursor = conn.cursor()
-        cursor.execute("""
-create table hashtags(
-	hashtag varchar(255) primary key,
-	popularity int,
-	nb_post_hour int,
-	last_update timestamp
-);
-
-create table related_hashtags(
-	hashtag varchar(255) references hashtags(hashtag),
-	relates_hashtag varchar(255)
-);
-        """)
-        cursor.close()
-        conn.commit()
-        conn.close()
-        return {"success": True}
+class bdd_retrieve(Resource):
+    def get(self, hashtag):
+        res = database.get_hashtag(hashtag)
+        res["related_hashtags"] = database.get_related_hashtags(hashtag)
+        if not res:
+            return {"error": "hashtag not found", "hashtag": hashtag}
+        for c in res:
+            if isinstance(res[c], datetime):
+                res[c] = datetime.isoformat(res[c])
+        return res
 
 api.add_resource(bdd_insert, '/insert/<string:hashtag>')
-api.add_resource(initdb, '/initdb')
+api.add_resource(bdd_retrieve, '/hashtag/<string:hashtag>')
 
 if __name__ == '__main__':
     app.run(debug=True, port=1997, host="0.0.0.0")
