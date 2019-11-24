@@ -24,7 +24,7 @@
    <body id="page-top" style="background:url(../static/img/BackgroundImage.jpg) no-repeat fixed center;background-size: cover">
 
         <!-- Header -->
-        <header class="masthead d-flex" style="margin-top: 10%;">
+        <header class="masthead d-flex" style="margin-top: 7%;">
 
                 <div class="container text-center my-auto">
 
@@ -33,18 +33,29 @@
                         <div class="jumbotron" style="background-color: transparent">
 
                             <h1 class="display-4">#Hashtag!</h1>
-                            <p><em>A free hashtag generator.</em><br><h4>just upload your picture</h4></p>
-                            <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Upload Image</a>
+                            <p><em>A free hashtag generator.</em><br><h4 id="group1">just upload your picture</h4></p>
 
-                             <div class="btn-group">
-                                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Theme</button>
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="#">Lifestyle</a>
-                                    <a class="dropdown-item" href="#">Sport</a>
-                                    <a class="dropdown-item" href="#">Outfit</a>
+                            <div class="custom-file" style="width: 20%;font-size: 15px;text-align: left;" id="group2">
+                                <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01" >
+                                <label class="custom-file-label" for="inputGroupFile01" style="">Upload image</label>
+                            </div>
+
+                             <div class="btn-group" style="margin-top:10px;width:100%;" id="group3">
+                                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"  style="width:15%;margin-left: auto;margin-right: auto;">Theme</button>
+                                <div class="dropdown-menu" style="width: 15%">
+                                    <a class="dropdown-item" href="#" themeValue="lifestyle">Lifestyle</a>
+                                    <a class="dropdown-item" href="#" themeValue="sport">Sport</a>
+                                    <a class="dropdown-item" href="#" themeValue="outfit">Outfit</a>
                                 </div>
 
-                            </div>
+                             </div>
+
+                             <div class="alert alert-success" id="hashtag" role="alert" style="margin-top: 30px;display:none; width: 50%; margin-left: auto;margin-right: auto;">
+                                <p class="mb-0" id="hashtagResult" style="font-size: 15px">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+                                <button type="button" class="btn btn-primary" style="margin-top: 5%">Upload new image</button>
+                             </div>
+
+
 
                         </div>
 
@@ -55,6 +66,10 @@
                 </div>
 
         </header>
+
+        <!-- ***************************************** JAVASCRIPT ***************************************** -->
+
+        <script type="text/javascript" src="/static/middleware.js"></script>
 
    </body>
 
