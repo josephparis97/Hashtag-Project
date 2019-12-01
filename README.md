@@ -1,8 +1,8 @@
-# hashtag
+# hashtag detector
 
 Goal app
 
-    Propose an app for people who want to associate picture to  hastag on social network
+    Propose an app for people who want to associate picture to a hastag on social network. Thanks to machine learning, we are able to   detect hastag associate to the picture  
     
 How is it work ?
 
