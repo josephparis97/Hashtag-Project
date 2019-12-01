@@ -1,4 +1,15 @@
 # hashtag
+
+Goal app
+
+    Propose an app for people who want to associate picture to  hastag on social network
+    
+How is it work ?
+
+    -  Go on the site  
+    -  Upload  your picture
+    -  Select best hastag for your post
+    
 Start app
 
     docker-compose up
