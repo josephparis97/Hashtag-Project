@@ -33,7 +33,7 @@ class bdd_retrieve(Resource):
         return res
 
 class selector:
-    def get_perfect_hashtags(theme,detect):
+    def get(self,theme):
         hashtags=requests.get("/hashtag/"+theme) #est-ce que c'est comme ça qu'on fait appelle à bdd_retrieve ?
         #faudrait mettre une condition sur la popularité du hashtag
         return hashtags
@@ -42,7 +42,7 @@ class selector:
 
 api.add_resource(bdd_insert, '/insert/<string:hashtag>')
 api.add_resource(bdd_retrieve, '/hashtag/<string:hashtag>')
-api.add_resource(get_perfect_hashtags, '/selector/<string:theme>')
+api.add_resource(selector, '/selector/<string:theme>')
 
 
 if __name__ == '__main__':
