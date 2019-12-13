@@ -66,7 +66,7 @@ def get_hashtag(hashtag):
     sql_cmd = "select hashtag, popularity, nb_post_hour, last_update from hashtags where hashtag=%s;"
     res = execute(sql_cmd, (hashtag,), fetch=True)
     if len(res) == 0:
-        return None
+        return {}
     elif len(res) == 1:
         return dict(zip(("hashtag", "popularity", "nb_post_hour", "last_update"), res[0]))
     else:

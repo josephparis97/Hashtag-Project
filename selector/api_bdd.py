@@ -12,6 +12,8 @@ import scrap
 import database
 from datetime import datetime
 import requests
+from typing import Dict
+from copy import deepcopy
 
 app = Flask(__name__)
 api = Api(app)
@@ -21,20 +23,28 @@ class bdd_insert(Resource):
         scrap.hashtag_to_bdd(hashtag)
         return {"uri": f"hashtag/{hashtag}"}
 
+def datetime_to_string(d: Dict):
+    """ Format all the datatime in a dict to iso format """
+    res = deepcopy(d)
+    for c in res:
+        if isinstance(res[c], datetime):
+            res[c] = datetime.isoformat(res[c])
+    return res
+
 class bdd_retrieve(Resource):
     def get(self, hashtag):
         res = database.get_hashtag(hashtag)
         res["related_hashtags"] = database.get_related_hashtags(hashtag)
         if not res:
             return {"error": "hashtag not found", "hashtag": hashtag}
-        for c in res:
-            if isinstance(res[c], datetime):
-                res[c] = datetime.isoformat(res[c])
-        return res
+        return datetime_to_string(res)
 
-class selector:
+class selector(Resource):
     def get(self,theme):
-        hashtags=requests.get("/hashtag/"+theme) #est-ce que c'est comme ça qu'on fait appelle à bdd_retrieve ?
+        hashtags = database.get_related_hashtags(theme) #est-ce que c'est comme ça qu'on fait appelle à bdd_retrieve ?
+        hashtags = {
+            hashtag: datetime_to_string(database.get_hashtag(hashtag)) for hashtag in hashtags
+        }
         #faudrait mettre une condition sur la popularité du hashtag
         return hashtags
 
