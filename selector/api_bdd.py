@@ -11,6 +11,7 @@ from flask_restful import Resource, Api
 import scrap
 import database
 from datetime import datetime
+import requests
 
 app = Flask(__name__)
 api = Api(app)
@@ -31,8 +32,18 @@ class bdd_retrieve(Resource):
                 res[c] = datetime.isoformat(res[c])
         return res
 
+class selector:
+    def get_perfect_hashtags(theme,detect):
+        hashtags=requests.get("/hashtag/"+theme) #est-ce que c'est comme ça qu'on fait appelle à bdd_retrieve ?
+        #faudrait mettre une condition sur la popularité du hashtag
+        return hashtags
+
+
+
 api.add_resource(bdd_insert, '/insert/<string:hashtag>')
 api.add_resource(bdd_retrieve, '/hashtag/<string:hashtag>')
+api.add_resource(get_perfect_hashtags, '/selector/<string:theme>')
+
 
 if __name__ == '__main__':
     app.run(debug=True, port=1997, host="0.0.0.0")
