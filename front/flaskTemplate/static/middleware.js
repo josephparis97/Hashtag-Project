@@ -9,7 +9,7 @@ $('body').on('click', '.dropdown-item', function() {
 
     $.ajax({
         type: 'POST',
-        url: '/route',
+        url: 'localhost:1997/image',
         data: formData,
         contentType: false,
         cache: false,
