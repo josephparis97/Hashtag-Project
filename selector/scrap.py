@@ -8,8 +8,8 @@ Created on Mon Nov 18 16:47:37 2019
 
 import requests
 from bs4 import BeautifulSoup
+import database
 import psycopg2
-from datetime import datetime
 
 def connect():
     connection = psycopg2.connect(user = "user",
@@ -18,27 +18,11 @@ def connect():
                               port = "5432",
                               database = "hashtagbdd")
     return connection
-"""
-connection=connect()
-cursor = connection.cursor()
-"""
-# Print PostgreSQL Connection properties
-#print ( connection.get_dsn_parameters(),"\n")
 
-# Print PostgreSQL version
-"""
-cursor.execute("insert into hashtags(hashtag,popularity,nb_post_hour) values('sql',2113249,390)")
-cursor.execute("SELECT * from hashtags;")
-record = cursor.fetchone()
-print("You are connected to - ", record,"\n")
-connection.commit()
-connection.close()
-cursor.close()
-"""
 def hashtag_to_bdd(hashtag):
     req= "http://best-hashtags.com/hashtag/"+hashtag
     page = requests.get(req)
-    obj = BeautifulSoup(page.content)
+    obj = BeautifulSoup(page.content, features="html.parser")
     if len(obj.body.contents)==0:
         return
     #scrap hashtag
@@ -57,21 +41,24 @@ def hashtag_to_bdd(hashtag):
         connection=connect()
     except psycopg2.OperationalError:
         return
+    
+    database.add_update_hashtag(hashtag, popularity, post_per_hour)
+    database.add_relations(hashtag, hashtag_list)
 
-    cursor = connection.cursor()
-    #cursor.execute("SELECT ha from hashtags;")
-    cursor.execute("SELECT hashtag from hashtags where hashtag=%s;",(hashtag,))
-    record = cursor.fetchone()
-    #now=datetime.timestamp(datetime.now())
-    #print(now)
-    if record:
-        cursor.execute("update hashtags set (popularity,nb_post_hour,last_update)=(%s,%s,now()) where hashtag=%s;",(popularity,post_per_hour,hashtag))
-    else:
-        cursor.execute("insert into hashtags(hashtag,popularity,nb_post_hour,last_update) values(%s,%s,%s,now())",(hashtag,popularity,post_per_hour))
-        cursor.executemany("insert into related_hashtags(hashtag,relates_hashtag) values(%s,%s)", ((hashtag, rel_hashtag) for rel_hashtag in hashtag_list))
+    # cursor = connection.cursor()
+    # #cursor.execute("SELECT ha from hashtags;")
+    # cursor.execute("SELECT hashtag from hashtags where hashtag=%s;",(hashtag,))
+    # record = cursor.fetchone()
+    # #now=datetime.timestamp(datetime.now())
+    # #print(now)
+    # if record:
+    #     cursor.execute("update hashtags set (popularity,nb_post_hour,last_update)=(%s,%s,now()) where hashtag=%s;",(popularity,post_per_hour,hashtag))
+    # else:
+    #     cursor.execute("insert into hashtags(hashtag,popularity,nb_post_hour,last_update) values(%s,%s,%s,now())",(hashtag,popularity,post_per_hour))
+    #     cursor.executemany("insert into related_hashtags(hashtag,relates_hashtag) values(%s,%s)", ((hashtag, rel_hashtag) for rel_hashtag in hashtag_list))
     
     
     
-    connection.commit()
-    connection.close()
-    cursor.close()
+    # connection.commit()
+    # connection.close()
+    # cursor.close()

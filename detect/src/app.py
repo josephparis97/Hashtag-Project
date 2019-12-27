@@ -1,26 +1,35 @@
-from bottle import route, run, post, request
+from flask import Flask, request
+from flask_restful import Resource, Api
 
-@route('/')
-def index():
-    return {"data":"Hello world!"}
+app = Flask(__name__)
+api = Api(app)
 
-@post("/image")
-def image():
-    res = request.files.get("image")
-    if not res:
-        return {
-            "error": "No image provided"
-        }
+class ImageDetection(Resource):
+    def post(self):
+        # print(request.files)
+        res = request.files.get("fileInput")
+        if not res:
+            return {
+                "error": "No image provided"
+            }
 
-    return {"keywords": [
-        "gym",
-        "fromage",
-        "Aéroport",
-        "plage",
-        "dauphin"
-    ]}
+        return {"keywords": [
+            "gym",
+            "fromage",
+            "Aéroport",
+            "plage",
+            "dauphin"
+        ]}
 
-if __name__ == "__main__":
+api.add_resource(ImageDetection, "/image")
+
+@app.after_request
+def after_request(response):
+    header = response.headers
+    header['Access-Control-Allow-Origin'] = '*'
+    return response
+
+if __name__ == '__main__':
     import os
     port = os.environ.get("port", 8080)
-    run(host='0.0.0.0', port=port)
+    app.run(debug=True, port=port, host="0.0.0.0")
