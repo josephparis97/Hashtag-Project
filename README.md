@@ -158,3 +158,8 @@ Enfin le endpoint /selector permet de sélectionner les hashtags de la base de d
 <code>api.add_resource(bdd_insert, '/insert/<string:hashtag>')</code><br>
 <code>api.add_resource(bdd_retrieve, '/hashtag/<string:hashtag>')</code><br>
 <code>api.add_resource(selector, '/selector/<string:theme>')</code><br>
+
+## Conclusion :page_with_curl:
+ 
+<p>Nous avons été très impressionné par la maniabilité et la facilitéde réaliser une application grâce à Docker. 
+Grâce à ce projet nous avons appris à utiliser cette technologie qui nous sera très utile dans le futur.</p>
