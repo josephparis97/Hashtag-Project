@@ -1,4 +1,4 @@
-# Projet Semestre: Hashtag Detector, docker compose project  :zap:
+# Projet Semestre Client/Serveur: Hashtag Detector  :zap:
 
 <p><strong>Ecole d'ingénieur:</strong> ESME Sudria, Majeur: Intelligence artificiel, Matiére: Client/Serveur.</p>
 <p><strong>Projet:</strong> Réalisation d'une plateforme qui permet de générer des Hashtags en fonction d'une image et des tendances.</p>
