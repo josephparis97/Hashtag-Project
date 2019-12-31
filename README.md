@@ -50,3 +50,16 @@ box d'Upload. C'est Un bug venant de Bootstrap sûrement.</p>
 ## Vue d'ensemble Projet, schéma, image et Photo  :notes:
 
 ![alt text](Schema.png)
+
+<p><strong>Explication: </strong> 
+<ol>
+<li>Sur le front, l’utilisateur doit renseigner une photo et un thème. </li>
+<li>La photo est ensuite analysé via le Docker “Detect” qui renvoie la liste 
+des éléments présents sur l’image (grâce à une Api de détection d’image quelconque). </li>
+<li>Selector est le conteneur qui prends en entrée le thème renseigné et les mots détectés 
+par “Detect” et renvoi une liste de hashtag au front. Afin de pouvoir générer des hashtags en fonction du thème, 
+Selector demande au docker qui contient la base de donnée une liste de hashtag relié au thème. Pour remplir la base de donné, le selector scrap à un 
+interval de temps régulier le site best-hashtags.com </li>
+</p>
+
+<p>Test</p>
