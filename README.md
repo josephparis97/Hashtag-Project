@@ -98,4 +98,20 @@ interval de temps régulier le site best-hashtags.com </li>
             - 5000:5000
 
 
-    
+ ## Front End, expliquation :clapper:   
+ 
+ ## Back End, expliquation :microscope:
+ 
+<p>Le back end consiste en 3 conteneurs docker :</p>
+
+<ul>
+<li>
+<strong>Detect:</strong> Grâce à une Api, ce conteneur permet d’identifier les éléments importants de l’image. Par exemple le sujet de la photo, le lieu où elle a été prise, les personnes présentes…’importe quelle api peut être utilisée, l'API Vision de Google par exemple permet de détecter les entités présentes sur l'image, le contexte général, ainsi que la localisation avec les métadonnées de la photo. On peut même envisager de faire nous même un réseau de neurones qui propose des hashtags parmi les plus populaires. Actuellement
+</li>
+<li>
+<strong>Selector:</strong> Selector est le conteneur principal de l’application car c’est elle qui va communiquer via des micro services avec les autre conteneurs. Pour faire ses microservices nous avons mis en place un serveur grâce à flask. D’autre part,afin de récupérer les hashtags et leur popularité nous avons scrapé un site à l’aide de BeautifulSoup en python.
+</li>
+<li>
+<strong>BDD:</strong> Notre base de donnée est une base de donnée relationnelle en postgres avec 2 tables: Une table Hashtag et une table related-hashtag. La table Hashtag contient le nom du hashtag et sa popularité (nombre d'utilisations globales et nombre d'utilisations sur la dernière heure). La table related hashtag permet d'associer à chaque hashtag un autre hashtag qui est similaire
+</li>
+</ul>
