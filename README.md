@@ -98,9 +98,9 @@ interval de temps régulier le site best-hashtags.com </li>
             - 5000:5000
 
 
- ## Front End, expliquation :clapper:   
+## Front End, expliquation :clapper:   
  
- ## Back End, expliquation :microscope:
+## Back End, expliquation :microscope:
  
 <p>Le back end consiste en 3 conteneurs docker :</p>
 
@@ -115,3 +115,46 @@ interval de temps régulier le site best-hashtags.com </li>
 <strong>BDD:</strong> Notre base de donnée est une base de donnée relationnelle en postgres avec 2 tables: Une table Hashtag et une table related-hashtag. La table Hashtag contient le nom du hashtag et sa popularité (nombre d'utilisations globales et nombre d'utilisations sur la dernière heure). La table related hashtag permet d'associer à chaque hashtag un autre hashtag qui est similaire
 </li>
 </ul>
+
+<strong>Un peu de détail sur "Selector"</strong>
+<p>Le principal du back c’est le container "Selector". 
+C’est cela qui sert à récupérer les infos sur le site.</p>
+
+<p>On a une fonction <strong>hashtag_to_bdd</strong> qui prend en paramètre un hashtag et qui vas scarper tout les hashtag relié à celui-ci. Ensuite le but de la fonction est de mettre à jour la base de données avec le nouveau hashtag et les hashtags qui lui sont reliés. Les informations que l’ont insert dans la bdd sont le nom du hashtag, sa popularité et son nombre de posts par heure. </p>
+
+<p>Dans database.py il y a toutes les fonctions utiles pour manipuler la base de données. Les deux principales fonctions présentes dans ce fichier sont : add_update_hashtag et add_remations.</p>
+<ul>
+<li>
+Add_update_hashtag est une fonction qui prend en entrée le hashtag, sa popularité et son nombre de poste par heure. Si le hashtag n’existe pas dans la base de données, il est ajouté. Si le hashtag existe déjà dans la base de données alors sa popularité et son nombre de posts par heure sont mis à jour.
+</li>
+<li>
+Add_relations est une fonction qui prend en entrée un hashtag ainsi qu’une liste de hashtags reliées. La fonction sert à insérer tous les hashtag reliées dans la base de données.
+</li>
+</ul>
+
+<p>Api_bdd.py contient ce qui va permettre de generer un serveur avec plusieurs endpoint afin que le front et le back de notre application puisse communiquer.</p>
+<p>
+Il y a trois principaux endpoint à retenir : 
+<ol>
+<li>/insert </li>
+<li>/hashtag </li>
+<li>/selector </li>
+</ol>
+</p>
+
+<p><strong>Expliquation: </strong></p>
+<ol>
+<li>
+/insert et le endpoint qui va permettre d’insérer le hashtag ainsi que les hashtags reliées dans la base de données. Pour cela il suffit de faire une get request en mettant en paramètre le hashtag concerné. 
+</li>
+<li>
+Le endpoint /hashtag sert à récupérer tout les hashtag similaires dans la base de données. Pareillement, il suffit de faire une get request avec l’url pour récupérer la liste de hashtags .
+</li>
+<li>
+Enfin le endpoint /selector permet de sélectionner les hashtags de la base de données reliées à un thème et de les renvoyer sous la forme d’une liste. Cette liste pourra ensuite être affichée sur le front.
+</li>
+</ol>
+
+<code>api.add_resource(bdd_insert, '/insert/<string:hashtag>')</code>
+<code>api.add_resource(bdd_retrieve, '/hashtag/<string:hashtag>')</code>
+<code>api.add_resource(selector, '/selector/<string:theme>')</code>
