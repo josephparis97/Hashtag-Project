@@ -21,7 +21,7 @@ services:
     - POSTGRES_USER=user
     - POSTGRES_PASSWORD=user
     - POSTGRES_DB=hashtagbdd
-  
+
   front:
     build: ./front
     ports:

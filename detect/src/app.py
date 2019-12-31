@@ -8,6 +8,7 @@ class ImageDetection(Resource):
     def post(self):
         # print(request.files)
         res = request.files.get("fileInput")
+
         if not res:
             return {
                 "error": "No image provided"
@@ -16,7 +17,7 @@ class ImageDetection(Resource):
         return {"keywords": [
             "gym",
             "fromage",
-            "Aéroport",
+            "Aroport",
             "plage",
             "dauphin"
         ]}
