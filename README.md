@@ -155,6 +155,6 @@ Enfin le endpoint /selector permet de sélectionner les hashtags de la base de d
 </li>
 </ol>
 
-<code>api.add_resource(bdd_insert, '/insert/<string:hashtag>')</code>
-<code>api.add_resource(bdd_retrieve, '/hashtag/<string:hashtag>')</code>
-<code>api.add_resource(selector, '/selector/<string:theme>')</code>
+<code>api.add_resource(bdd_insert, '/insert/<string:hashtag>')</code><br>
+<code>api.add_resource(bdd_retrieve, '/hashtag/<string:hashtag>')</code><br>
+<code>api.add_resource(selector, '/selector/<string:theme>')</code><br>
