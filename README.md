@@ -14,10 +14,11 @@ est d’une photo. Notre site internet pourrait faire gagner beaucoup de temps a
 <p>Pour notre projet, nous avions donc besoin de récupérer les Hashtag et leurs popularité. Pour cela nous avons fait du scrapping sur 
 <a href='http://best-hashtags.com/'>Best Hashtag</a>. Dans la partie suivante nous verrons l’architecture que nous avons utilisé pour notre application. </p>
 
-<p>Une fois le projet cloner:</p>
+<p>Lancer le projet:</p>
 
-    -  Aller à la route du projet  
-    -  taper la commande: docker-compose up
+    -  Aller à la root du projet  
+    -  Taper la commande: docker-compose up
+    -  Puis aller sur https://localhost:5000
     
     
 <p>Comment ca marche:</p>
