@@ -33,7 +33,31 @@ box d'Upload. C'est Un bug venant de Bootstrap sûrement.</p>
     
 ![alt text](Mockup.png)
 
+
+## Structure Code, dossiers et les différents fichiers  :open_file_folder:
+
+###### Front  
+    Frontend du service
+    Outils utilisés: HTML/CSS, Javascript & AJAX, Docker
+    
+###### Selector  
+    Api for hashtag recommendation
+    Outils utilisés: Python & Flask, Docker
+    
+###### Detect  
+    Api for image recognition
+    Outils utilisés: Python & Flask, Docker
+
+###### BDD  
+    Base de données
+    Outils utilisés: Python & Flask, Docker, Psycopg2, BeautifulSoup
+    
+    
 ## Etat de l'art, :blue_book:
+
+<p><strong>Docker: </strong> 
+
+##### Docker pour la création des différents microservice du projet
 
 <p><strong>Back End: </strong> 
 
@@ -63,25 +87,20 @@ box d'Upload. C'est Un bug venant de Bootstrap sûrement.</p>
     Nous l’utilisons principalement au sein du projet afin d’établir 
     des routes web, ainsi qu’effectuer un filtrage des méthodes HTTP.
     
-
-
-## Structure Code, dossiers et les différents fichiers  :open_file_folder:
-
-###### Front  
-    Frontend du service
-    Outils utilisés: HTML/CSS, Javascript & AJAX, Docker
+##### BeautifulSoop, Framework pour Python
+    « Beautiful Soup est une bibliothèque Python qui utilise votre analyseur html / xml pré- installé 
+    et convertit la page Web / html / xml en une arborescence composée de balises, d’éléments, d’attributs 
+    et de valeurs. Pour être plus précis, l’arbre est constitué de quatre types d’objets, Tag, NavigableString, 
+    BeautifulSoup et Comment. Cet arbre peut ensuite être "interrogé" en utilisant 
+    les méthodes / propriétés de l'objet BeautifulSoup créé à partir de la bibliothèque de l’analyseur. » 
+    - https://riptutorial.com/fr/beautifulsoup
     
-###### Selector  
-    Api for hashtag recommendation
-    Outils utilisés: Python & Flask, Docker
-    
-###### Detect  
-    Api for image recognition
-    Outils utilisés: Python & Flask, Docker
+    En d’autre terme, c’est l’outil Python qui va nous permettre de scrapper 
+    les offres d’emploi indeed pour notre projets.
 
-###### BDD  
-    Base de données
-    Outils utilisés: Python & Flask, Docker, Psycopg2, BeautifulSoup
+##### Psycopg2, pour la base de donnée
+    Psycopg est le plus populaire des adaptateurs
+    PostgreSQL pour le langage de programmation Python.
     
 ## Vue d'ensemble Projet, schéma, image et Photo  :notes:
 
