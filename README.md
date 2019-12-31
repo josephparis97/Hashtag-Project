@@ -100,6 +100,24 @@ interval de temps régulier le site best-hashtags.com </li>
             - 5000:5000
 
 ## Front End, expliquation :clapper:   
+
+<ul>
+<li><p>Le Front End de notre projet est codé en HTML/CSS, Javascript et Bootstrap, 
+et utilise AJAX pour faire des requêtes au Backend.</p></li>
+
+<li><p>Tout d'abord une page d'acceuil qui permet d'uploader une photo et de séléectionner un théme</p></li>
+
+<li><p>Une fois la photo et le théme envoyé, il y plusieur cas de figure:
+
+<ol>
+    <li>Si l'utilisateur oublie d'uploader une photo, mais sélectionne un théme, on le notifie avec un message</li>
+    <li>Si l'utilisateur, uploade un document différent des format jpg ou png, on le notifie également une fois le théme sélectionné</li>
+    <li>Si il y a'une erreur venant du backend, on demande à l'utilisateur, de réessayer ultériurement</li>
+    <li>Si rien des cas de figure ci-dessus n'a lieu, alors la photo est analysé, et nous permet de retouner des hashtags, en fct des la photo et du théme</li>
+</ol>
+
+</p></li> 
+</ul>
  
 ## Back End, expliquation :microscope:
  
