@@ -35,6 +35,30 @@ box d'Upload. C'est Un bug venant de Bootstrap sûrement.</p>
 
 ## Etat de l'art, :blue_book:
 
+<p><strong>Back End: </strong> 
+
+##### Langage de programmation python
+    Nous avons choisi de développer notre programme en Python, un langage de haut niveau, interprété, dynamique et à usage général qui 
+    met l’accent sur la lisibilité du code. La syntaxe en Python aide les programmeurs à coder en moins d’étapes qu’en Java ou C++.
+    
+    Les principaux avantages de Python sont :
+    - Sa puissance et sa rapidité d’interprétation 
+    - Il s’intègre bien au sein d’autres langages 
+    - Il est multiplateforme
+    - Son apprentissage est rapide et relativement intuitif
+    - Son code est Open Source
+    
+##### Flask, Microframework pour Python
+    Flask est un « framework » open-source de développement web en Python. Son but principal est d'être léger, afin de garder la souplesse 
+    de la programmation en Python. Il est distribué sous licence BSD. 
+    
+    Ses principaux atouts sont sa documentation et ses outils de développement qui sont très nombreux. Le noyau de Flask est simple, 
+    mais il existe un grand nombre d’extensions qui s’y intègrent très bien. Il est activement maintenu et mis à jour.
+    
+    Nous l’utilisons principalement au sein du projet afin d’établir des routes web, ainsi qu’effectuer un filtrage des méthodes HTTP.
+    
+
+
 ## Structure Code, dossiers et les différents fichiers  :open_file_folder:
 
 ###### Front  
