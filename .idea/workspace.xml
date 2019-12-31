@@ -28,8 +28,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="90">
-                <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+              <first_editor relative-caret-position="319">
+                <caret line="24" column="18" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
               </first_editor>
               <second_editor />
             </state>
@@ -81,7 +81,7 @@
         <entry file="file://$PROJECT_DIR$/selector/requirements.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="30">
-              <caret line="2" column="5" lean-forward="true" selection-start-line="2" selection-end-line="3" />
+              <caret line="2" column="5" selection-start-line="2" selection-end-line="3" />
             </state>
           </provider>
         </entry>
@@ -261,12 +261,12 @@
       <workItem from="1577704399166" duration="1233000" />
       <workItem from="1577706445372" duration="7511000" />
       <workItem from="1577720903779" duration="19276000" />
-      <workItem from="1577789775350" duration="12659000" />
+      <workItem from="1577789775350" duration="13586000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72059000" />
+    <option name="totallyTimeSpent" value="72986000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -398,7 +398,7 @@
     <entry file="file://$PROJECT_DIR$/selector/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
-          <caret line="2" column="5" lean-forward="true" selection-start-line="2" selection-end-line="3" />
+          <caret line="2" column="5" selection-start-line="2" selection-end-line="3" />
         </state>
       </provider>
     </entry>
@@ -446,8 +446,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="90">
-            <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+          <first_editor relative-caret-position="319">
+            <caret line="24" column="18" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
           </first_editor>
           <second_editor />
         </state>

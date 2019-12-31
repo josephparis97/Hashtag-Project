@@ -1,25 +1,28 @@
-# Projet Semestre Client/Serveur: hashtag detector  :zap:
+# Projet Semestre Client/Serveur: Hashtag Detector  :zap:
 
 <p><strong>Ecole d'ingénieur:</strong> ESME Sudria, Majeur: Intelligence artificiel, Matiére: Client/Serveur. <a href="https://esme.fr">esme.fr</a></p>
 <p><strong>Projet:</strong> Réalisation d'une plateforme qui permet de générer des Hashtags en fonction d'une image et des tendances.</p>
-<p><strong>Groupe:</strong>Razafindrabe Nathanaël, De Massé Grégoire, Joseph Paris, Arthur Agostini</p>
-<p><strong>Encadrant:</strong> Maxime Robin</p>
+<p><strong>Groupe:</strong> Razafindrabe Nathanaël, De Massé Grégoire, Joseph Paris, Arthur Agostini</p>
 
-# hashtag detector
+## Hashtag Detector
 
-Goal app
+<p>Proposer un service pour les personnes qui souhaitent générer des hahtag en fonction d'une image et de la tendance des hashtag.</p>
 
-    Propose an app for people who want to associate picture to a hastag on social network. Thanks to machine learning, we are able to   detect hastag associate to the picture  
+<p>Une fois le projet cloner:</p>
+
+    -  Aller à la route du projet  
+    -  taper la commande: docker-compose up
     
-How is it work ?
-
-    -  Go on the site  
-    -  Upload  your picture
-    -  Select best hastag for your post
     
-Start app
+<p>Comment ca marche:</p>
 
-    docker-compose up
+<ol>
+<li>Cliquer sur browse</li>
+<li>Choisisez une photo à uploader</li>
+<li>Cliquer sur "Theme" et choisir choisir un theme</li>
+</ol>
+    
+![alt text](Mockup.png)
 
 Front is running on port 5000
 
