@@ -46,3 +46,7 @@ box d'Upload. C'est Un bug venant de Bootstrap sûrement.</p>
 
 ###### BDD  
     Base de données
+    
+## Vue d'ensemble Projet, schéma, image et Photo  :notes:
+
+![alt text](Schema.png)
