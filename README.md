@@ -60,6 +60,38 @@ des éléments présents sur l’image (grâce à une Api de détection d’imag
 par “Detect” et renvoi une liste de hashtag au front. Afin de pouvoir générer des hashtags en fonction du thème, 
 Selector demande au docker qui contient la base de donnée une liste de hashtag relié au thème. Pour remplir la base de donné, le selector scrap à un 
 interval de temps régulier le site best-hashtags.com </li>
+</ol>
 </p>
 
-<p>Test</p>
+###### Docker compose  
+    version: '3'
+    
+    services:
+        detect:
+            build: ./detect
+            ports:
+            - 8080:8080
+  
+          selector:
+            build: ./selector
+            ports:
+            - 1997:1997
+            # volumes:
+            # - ./selector:/app # for dev
+        
+          bdd:
+            image: postgres
+            ports:
+            - 5432:5432
+            environment: 
+            - POSTGRES_USER=user
+            - POSTGRES_PASSWORD=user
+            - POSTGRES_DB=hashtagbdd
+        
+          front:
+            build: ./front
+            ports:
+            - 5000:5000
+
+
+    
