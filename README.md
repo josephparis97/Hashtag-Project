@@ -58,6 +58,13 @@ box d'Upload. C'est Un bug venant de Bootstrap sûrement.</p>
 <p><strong>Docker: </strong> 
 
 ##### Docker pour la création des différents microservice du projet
+    Le logiciel « Docker » est une technologie de conteneurisation qui permet la création et 
+    l'utilisation de conteneurs. Les conteneurs comme des machines virtuelles très légères et 
+    modulaires. En outre, ces conteneurs nous offrent une grande flexibilité : vous pouvez les créer, 
+    déployer, copier et déplacer d'un environnement à un autre,
+    
+    A l'intérieur des conteneurs, nous allons y mettre les différents microservices de notre
+    projet. Il seront ainsi indépendantes les unes des autres.
 
 <p><strong>Back End: </strong> 
 
@@ -101,6 +108,43 @@ box d'Upload. C'est Un bug venant de Bootstrap sûrement.</p>
 ##### Psycopg2, pour la base de donnée
     Psycopg est le plus populaire des adaptateurs
     PostgreSQL pour le langage de programmation Python.
+    
+<p><strong>Front: </strong> 
+
+##### HTML, CSS, Bootstrap et Javascript pour l'interface
+    Pour créer notre interface utilisateur, on va utiliser deux langage: HTML et CSS.
+    HTML (HyperText Markup Language) est un langage de description. Il a fait son 
+    apparition dès 1991 lors du lancement du Web. Son rôle est de gérer et organiser le 
+    contenu. Grâce à ce langage, on indique ce que l’on affiche dans notre page web (texte, titre, photo, 
+    formulaire, lien etc…)
+
+    Et Grâce au CSS (Cascading Style Sheets, aussi appelées Feuilles de style), 
+    on gére l’agencement de notre page web. Par exemple on pourra dire que je veux que 
+    ce titre en particulier soit de tel taille, de tel couleur, de tel style, on va pouvoir également 
+    dire que je veux que cette photo soit à tel position…Pour résumer il gère le style du site (agencement, 
+    positionnement, décoration, couleurs, taille du texte…). 
+    
+    Puis grâce au Javascript, on va pouvoir rendre le site web interactive. 
+
+##### Javascript et AJAX pour requêter sur les microservices du Backend
+    De plus Javascript va nous être utiles notamment grâce à la technologie AJAX. 
+    AJAX est l’acronyme de Asynchronous Javascript and XML. Derrières ce nom se cache un ensemble de technologie 
+    destinées à réaliser de rapides mises à jour du contenu d'une page Web, 
+    sans qu'elles nécessitent le moindre rechargement visible par l'utilisateur de la page Web. 
+    Le HTML et le CSS (voir plus bas) sont pris en compte pour l’affichage des résultats. 
+    Mais le transfert de données est géré exclusivement par le Javascript, 
+    et utilise certains type de formatage de données comme le XML ou le JSON. 
+
+    Concrètement à quoi peut servir dans notre projet?
+    
+    Lorsque qu’un utilisateur upload une photo et le théme de la photo au Back end, pour éviter le rafraîchissement 
+    de la page à chaque envoi de message, on utilise AJAX. La requêtes doit ainsi se faire de manière transparentes 
+    afin de ne pas gêner l’utilisateur. Le rechargement complet d’une page Web n’est donc pas envisageable. 
+    C’est ainsi qu’intervient AJAX, pour permettre le traitement de la requêtes par le backend sans 
+    rechargement de la page.
+
+
+##### Docker pour la création des différents microservice du projet
     
 ## Vue d'ensemble Projet, schéma, image et Photo  :notes:
 
