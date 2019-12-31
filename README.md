@@ -2,8 +2,8 @@
 
 <p><strong>Ecole d'ingénieur:</strong> ESME Sudria, Majeur: Intelligence artificiel, Matiére: Client/Serveur. <a href="https://esme.fr">esme.fr</a></p>
 <p><strong>Projet:</strong> Réalisation d'une plateforme qui permet de générer des Hashtags en fonction d'une image et des tendances.</p>
+<p><strong>Groupe:</strong>Razafindrabe Nathanaël, De Massé Grégoire, Joseph Paris, Arthur Agostini</p>
 <p><strong>Encadrant:</strong> Maxime Robin</p>
-<p><strong>Groupe:</strong> <li>Razafindrabe Nathanaël</li><li>De Massé Grégoire</li><li>Joseph Paris</li><li>Arthur Agostini</li></p>
 
 # hashtag detector
 
