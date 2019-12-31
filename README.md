@@ -37,15 +37,19 @@ box d'Upload. C'est Un bug venant de Bootstrap sûrement.</p>
 
 ###### Front  
     Frontend du service
+    Outils utilisés: HTML/CSS, Javascript & AJAX, Docker
     
 ###### Selector  
     Api for hashtag recommendation
+    Outils utilisés: Python & Flask, Docker
     
 ###### Detect  
     Api for image recognition
+    Outils utilisés: Python & Flask, Docker
 
 ###### BDD  
     Base de données
+    Outils utilisés: Python & Flask, Docker, Psycopg2, BeautifulSoup
     
 ## Vue d'ensemble Projet, schéma, image et Photo  :notes:
 
