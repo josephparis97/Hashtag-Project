@@ -4,7 +4,7 @@ $('body').on('click', '.dropdown-item', function() {
 	const fileInput = document.querySelector('#inputGroupFile01');
 
     if(document.querySelector('#inputGroupFile01').files.length == 0 ){
-        document.getElementById("hashtagResult").innerHTML = 'No image provided!';
+        document.getElementById("hashtagResult").innerHTML = 'No image provided! :(';
         $("#hashtag").show();
         $("#group1").hide();
         $("#group2").hide();

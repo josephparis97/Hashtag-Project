@@ -1,6 +1,8 @@
 .mypy_cache
 .vscode
+
 .idea
+.idea/workspace.xml
 
 __pycache__
 *.pyc
