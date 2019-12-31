@@ -33,6 +33,8 @@ box d'Upload. C'est Un bug venant de Bootstrap sûrement.</p>
     
 ![alt text](Mockup.png)
 
+## Etat de l'art, :blue_book:
+
 ## Structure Code, dossiers et les différents fichiers  :open_file_folder:
 
 ###### Front  
@@ -96,7 +98,6 @@ interval de temps régulier le site best-hashtags.com </li>
             build: ./front
             ports:
             - 5000:5000
-
 
 ## Front End, expliquation :clapper:   
  
