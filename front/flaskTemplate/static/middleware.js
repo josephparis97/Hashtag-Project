@@ -44,7 +44,6 @@ $('body').on('click', '.dropdown-item', function() {
 });
 
 $('body').on('click', '.btn.btn-primary', function() {
-    document.getElementById("inputGroupFile01").value = '';
 	$("#hashtag").hide();
 	$("#group1").show();
 	$("#group2").show();
