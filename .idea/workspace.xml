@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="06c0f6ee-8933-4047-945e-764c63b0ec51" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/detect/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/detect/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/detect/src/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/detect/src/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front/flaskTemplate/flaskSample.py" beforeDir="false" afterPath="$PROJECT_DIR$/front/flaskTemplate/flaskSample.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/flaskTemplate/static/img/.BackgroundImage2.jpg.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/flaskTemplate/static/middleware.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/flaskTemplate/static/middleware.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/front/requirements.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -41,11 +35,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/front/flaskTemplate/flaskSample.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="113">
-              <caret line="24" column="50" selection-start-line="24" selection-start-column="50" selection-end-line="24" selection-end-column="50" />
+            <state relative-caret-position="390">
+              <caret line="70" column="3" selection-start-line="70" selection-start-column="3" selection-end-line="70" selection-end-column="3" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
               </folding>
@@ -53,7 +47,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/front/Dockerfile">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
@@ -65,8 +59,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/front/requirements.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="7" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
+            <state relative-caret-position="30">
+              <caret line="2" column="10" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -98,7 +92,7 @@
         <entry file="file://$PROJECT_DIR$/docker-compose.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="405">
-              <caret line="27" column="14" lean-forward="true" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
+              <caret line="27" column="14" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -141,14 +135,14 @@
         <option value="$PROJECT_DIR$/front/flaskTemplate/static/style.css" />
         <option value="$PROJECT_DIR$/selector/api_bdd.py" />
         <option value="$PROJECT_DIR$/detect/requirements.txt" />
-        <option value="$PROJECT_DIR$/front/requirements.txt" />
         <option value="$PROJECT_DIR$/front/flaskTemplate/templates/index.html" />
         <option value="$PROJECT_DIR$/detect/src/app.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/docker-compose.yml" />
         <option value="$PROJECT_DIR$/front/Dockerfile" />
-        <option value="$PROJECT_DIR$/front/flaskTemplate/flaskSample.py" />
         <option value="$PROJECT_DIR$/front/flaskTemplate/static/middleware.js" />
+        <option value="$PROJECT_DIR$/front/requirements.txt" />
+        <option value="$PROJECT_DIR$/front/flaskTemplate/flaskSample.py" />
       </list>
     </option>
   </component>
@@ -259,12 +253,12 @@
       <workItem from="1577560322381" duration="2344000" />
       <workItem from="1577704399166" duration="1233000" />
       <workItem from="1577706445372" duration="7511000" />
-      <workItem from="1577720903779" duration="18302000" />
+      <workItem from="1577720903779" duration="19168000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58426000" />
+    <option name="totallyTimeSpent" value="59292000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -370,13 +364,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/front/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="7" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/selector/requirements.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -387,13 +374,6 @@
           <folding>
             <element signature="e#108#131#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docker-compose.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="14" lean-forward="true" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -414,16 +394,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/front/flaskTemplate/flaskSample.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="24" column="50" selection-start-line="24" selection-start-column="50" selection-end-line="24" selection-end-column="50" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/front/flaskTemplate/static/middleware.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="32">
@@ -435,6 +405,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="35" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker-compose.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="14" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="10" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/flaskTemplate/flaskSample.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="70" column="3" selection-start-line="70" selection-start-column="3" selection-end-line="70" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
