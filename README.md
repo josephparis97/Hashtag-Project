@@ -8,6 +8,12 @@
 
 <p>Proposer un service pour les personnes qui souhaitent générer des hahtag en fonction d'une image et de la tendance des hashtag.</p>
 
+<p>Hashtag project est le nom de notre projet qui consiste à générer automatiquement une liste de hashtag en fonction d’un thème 
+est d’une photo. Notre site internet pourrait faire gagner beaucoup de temps aux influenceurs ou utilisateurs fréquents d’ Instagram. </p>
+
+<p>Pour notre projet, nous avions donc besoin de récupérer les Hashtag et leurs popularité. Pour cela nous avons fait du scrapping sur 
+<a href='http://best-hashtags.com/'>Best Hashtag</a>. Dans la partie suivante nous verrons l’architecture que nous avons utilisé pour notre application. </p>
+
 <p>Une fois le projet cloner:</p>
 
     -  Aller à la route du projet  
@@ -23,15 +29,20 @@
 </ol>
 
 <p><strong>Attention!!!</strong> Lorsqu'on upload une photo, la photo est bien prise en compte par contre son nom ne s'affiche pas dans la
-"box d'Upload". C'est Un bug venant de Bootstrap sûrement.</p>
+box d'Upload. C'est Un bug venant de Bootstrap sûrement.</p>
     
 ![alt text](Mockup.png)
 
-## Directories
+## Structure Code, dossiers et les différents fichiers  :open_file_folder:
 
-- front  
-    Front of the app
-- selector  
+###### Front  
+    Frontend du service
+    
+###### Selector  
     Api for hashtag recommendation
-- detect  
-    image recognition
+    
+###### Detect  
+    Api for image recognition
+
+###### BDD  
+    Base de données
