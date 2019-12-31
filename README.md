@@ -21,12 +21,11 @@
 <li>Choisisez une photo à uploader</li>
 <li>Cliquer sur "Theme" et choisir choisir un theme</li>
 </ol>
+
+<p><strong>Attention!!!</strong> Lorsqu'on upload une photo, la photo est bien prise en compte par contre son nom ne s'affiche pas dans la
+"box d'Upload". C'est Un bug venant de Bootstrap sûrement.</p>
     
 ![alt text](Mockup.png)
-
-
-
-Front is running on port 5000
 
 ## Directories
 
