@@ -47,10 +47,6 @@ def image():
                     hashtagsResult = hashtagsResult + ' ' + hashtag
 
             except:
-                # En cas d'erreur, on retorune quand meme des hashtag en rapport avec le theme
-                pass
-
-            if hashtagsResult == '':
                 hashtagsResult = getHashtagByTheme(themeValue)
 
             return hashtagsResult
